@@ -13,6 +13,8 @@ class App extends Component {
 
   render() {
     return (
+      // https://www.wix.com/website-template/view/html/653
+      // https://material-ui.com/getting-started/usage/
       <div>
         <Hello name={this.state.name} />
         <p>
