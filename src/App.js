@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Hello from "./components/Hello";
+import Hello from "./components/clinic/CreateClinic";
 
 class App extends Component {
   constructor() {
@@ -18,6 +19,7 @@ class App extends Component {
         <p>
           Start editing to see some magic happen11 :)
         </p>
+        
       </div>
     );
   }
