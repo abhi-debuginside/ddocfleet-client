@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Hello from "./components/Hello";
 import CreateClinic from "./components/clinic/CreateClinic";
+import CopyRightInfo from "./components/common/CopyRightInfo";
 
 class App extends Component {
   constructor() {
@@ -17,10 +18,7 @@ class App extends Component {
       <div>
         <Hello name={this.state.name} />
         <CreateClinic />
-        <p>
-          Start editing to see some magic happen11 :)
-        </p>
-        
+        <CopyRightInfo />
       </div>
     );
   }
