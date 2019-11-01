@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Hello from "./components/Hello";
-import Hello from "./components/clinic/CreateClinic";
+import CreateClinic from "./components/clinic/CreateClinic";
 
 class App extends Component {
   constructor() {
@@ -16,6 +16,7 @@ class App extends Component {
       // https://material-ui.com/getting-started/usage/
       <div>
         <Hello name={this.state.name} />
+        <CreateClinic />
         <p>
           Start editing to see some magic happen11 :)
         </p>
