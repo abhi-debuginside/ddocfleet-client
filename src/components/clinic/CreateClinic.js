@@ -14,7 +14,7 @@ class CreateClinic extends Component {
   render() {
     return (
       <form container novalidation>
-       <Grid Item xs={12} sm={6} >
+       <Grid xs={12} sm={6} >
           <Typography variant="title" margin={2} component="h3" >
             Create a clinic
           </Typography>
