@@ -6,16 +6,45 @@ import Typography from "@material-ui/core/Typography";
 
 class CreateClinic extends Component {
   // constructor
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayName: "",
+      registrationNumber: "",
+      address1: "",
+      landmark: "",
+      city: "",
+      zip: "",
+      state: "",
+      country: ""
+    };
   }
+
+  // functions
+  addClinic = e => {
+    e.preventDefault();
+    const clinic = {
+      displayName: this.state.displayName,
+      registrationNumber: this.state.registrationNumber,
+      address1: this.state.address1,
+      landmark: this.state.landmark,
+      city: this.state.city,
+      zip: this.state.zip,
+      state: this.state.state,
+      country: this.state.country,
+    };
+  };
+  onChange = e => {
+    this.setState({ [e.target.name]: e.type.value });
+  };
 
   // render dom elements
   render() {
     return (
       <form container novalidation>
-       <Grid xs={12} sm={6} >
-          <Typography variant="title" margin={2} component="h3" >
+        <Grid>
+          <Typography variant="title" margin={2} component="h3">
             Create a clinic
           </Typography>
         </Grid>
@@ -26,8 +55,7 @@ class CreateClinic extends Component {
           direction="row"
           justify="center"
           alignItems="center"
-        >        
-
+        >
           <Grid Item xs={12} sm={6}>
             <TextField
               required
@@ -36,6 +64,7 @@ class CreateClinic extends Component {
               label="Clinic Name"
               fullWidth
               autoComplete="fname"
+              value={this.state.displayName}
             />
           </Grid>
           <Grid Item xs={12} sm={6}>
@@ -61,7 +90,7 @@ class CreateClinic extends Component {
             <TextField
               id="landmark"
               name="landmark"
-              label="Landmark"
+              label="landmark"
               fullWidth
               autoComplete="billing address-line1"
             />
@@ -105,7 +134,7 @@ class CreateClinic extends Component {
             />
           </Grid>
           <Grid item item xs={1}>
-            <Button type="submit"  variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="primary">
               Create
             </Button>
           </Grid>
