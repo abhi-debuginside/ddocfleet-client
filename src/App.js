@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Hello from "./components/Hello";
-import CreateClinic from "./components/clinic/CreateClinic";
+import Container from "@material-ui/core/Container";
 import CopyRightInfo from "./components/common/CopyRightInfo";
+import AppRouter from "./components/AppRouter";
 
 class App extends Component {
   constructor() {
@@ -18,8 +18,9 @@ class App extends Component {
       // https://github.com/only2dhir/react-js-material/tree/master/src
       // https://www.devglan.com/react-js/reactjs-material-ui-example
       <div>
-        <Hello name={this.state.name} />
-        <CreateClinic />
+        <Container>
+          <AppRouter />
+        </Container>
         <CopyRightInfo />
       </div>
     );
