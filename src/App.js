@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
 import CopyRightInfo from "./components/common/CopyRightInfo";
+import NavBar from "./components/common/NavBar";
 import AppRouter from "./components/AppRouter";
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
       // https://github.com/only2dhir/react-js-material/tree/master/src
       // https://www.devglan.com/react-js/reactjs-material-ui-example
       <div>
+        <NavBar />
         <Container>
           <AppRouter />
         </Container>
