@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import ApiService from '.services/ApiService';
 
 class CreateClinic extends Component {
   
@@ -34,6 +35,8 @@ class CreateClinic extends Component {
       state: this.state.state,
       country: this.state.country,
     };
+    ApiService.CreateClinic(clinic);
+    Console.log("Clinic saved successfully...");
   };
 
   onChange = e => {
