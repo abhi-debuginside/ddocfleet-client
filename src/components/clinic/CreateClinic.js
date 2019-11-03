@@ -5,10 +5,10 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 class CreateClinic extends Component {
+  
   // constructor
   constructor(props) {
     super(props);
-
     this.state = {
       displayName: "",
       registrationNumber: "",
@@ -35,6 +35,7 @@ class CreateClinic extends Component {
       country: this.state.country,
     };
   };
+
   onChange = e => {
     this.setState({ [e.target.name]: e.type.value });
   };
@@ -143,4 +144,5 @@ class CreateClinic extends Component {
     );
   }
 }
+
 export default CreateClinic;
