@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import ApiService from '.services/ApiService';
+import ApiService from '../../services/ApiService';
 
 class CreateClinic extends Component {
   
@@ -25,6 +25,7 @@ class CreateClinic extends Component {
   // functions
   addClinic = e => {
     e.preventDefault();
+    alert('hello got it');
     const clinic = {
       displayName: this.state.displayName,
       registrationNumber: this.state.registrationNumber,
@@ -36,7 +37,7 @@ class CreateClinic extends Component {
       country: this.state.country,
     };
     ApiService.CreateClinic(clinic);
-    Console.log("Clinic saved successfully...");
+    console.log("Clinic saved successfully...");
   };
 
   onChange = e => {
@@ -137,8 +138,8 @@ class CreateClinic extends Component {
               autoComplete="billing country"
             />
           </Grid>
-          <Grid item item xs={1}>
-            <Button type="submit" variant="contained" color="primary">
+          <Grid item xs={1}>
+            <Button type="submit" variant="contained" color="primary" onClick={this.addClinic} >
               Create
             </Button>
           </Grid>

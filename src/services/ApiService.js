@@ -5,6 +5,7 @@ class ApiService {
   // functions
   createClinic(clinic)
   {
+    console.log('service function called!');
     localStorage.setItem("clinic", clinic);
   }
 }

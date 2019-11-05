@@ -18,6 +18,7 @@ class App extends Component {
       // https://material-ui.com/getting-started/usage/
       // https://github.com/only2dhir/react-js-material/tree/master/src
       // https://www.devglan.com/react-js/reactjs-material-ui-example
+      // https://reactkungfu.com/2015/07/why-and-how-to-bind-methods-in-your-react-component-classes/
       <div>
         <NavBar />
         <Container>
