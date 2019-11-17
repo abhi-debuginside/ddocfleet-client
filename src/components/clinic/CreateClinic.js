@@ -36,7 +36,7 @@ class CreateClinic extends Component {
       state: this.state.state,
       country: this.state.country,
     };
-    ApiService.CreateClinic(clinic);
+    ApiService.addClinic(clinic);
     console.log("Clinic saved successfully...");
   };
 

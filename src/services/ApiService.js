@@ -1,13 +1,11 @@
-class ApiService {
-  // constructor
-  constructor() {}
-
+const ApiService ={
   // functions
-  createClinic(clinic)
+  addClinic: function(clinic)
   {
+    alert('service function called!');
     console.log('service function called!');
     localStorage.setItem("clinic", clinic);
   }
 }
 
-export default new ApiService();
+export default ApiService;
