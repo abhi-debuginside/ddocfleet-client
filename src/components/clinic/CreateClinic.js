@@ -3,10 +3,9 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import ApiService from '../../services/ApiService';
+import ApiService from "../../services/ApiService";
 
 class CreateClinic extends Component {
-  
   // constructor
   constructor(props) {
     super(props);
@@ -25,7 +24,7 @@ class CreateClinic extends Component {
   // functions
   addClinic = e => {
     e.preventDefault();
-    alert('hello got it');
+    alert("hello got it");
     const clinic = {
       displayName: this.state.displayName,
       registrationNumber: this.state.registrationNumber,
@@ -34,7 +33,7 @@ class CreateClinic extends Component {
       city: this.state.city,
       zip: this.state.zip,
       state: this.state.state,
-      country: this.state.country,
+      country: this.state.country
     };
     ApiService.addClinic(clinic);
     console.log("Clinic saved successfully...");
@@ -47,7 +46,7 @@ class CreateClinic extends Component {
   // render dom elements
   render() {
     return (
-      <form >
+      <form>
         <Grid>
           <Typography variant="caption" margin={2} component="h3">
             Create a clinic
@@ -72,7 +71,90 @@ class CreateClinic extends Component {
               value={this.state.displayName}
             />
           </Grid>
-         
+
+          <Grid item={true} xs={12} sm={6}>
+            <TextField
+              required
+              id="registrationNumber"
+              name="registrationNumber"
+              label="Registration Number"
+              fullWidth
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <TextField
+              required
+              id="address1"
+              name="address1"
+              label="Address line 1"
+              fullWidth
+              autoComplete="billing address-line1"
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <TextField
+              id="landmark"
+              name="landmark"
+              label="landmark"
+              fullWidth
+              autoComplete="billing address-line1"
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              id="city"
+              name="city"
+              label="City"
+              fullWidth
+              autoComplete="billing address-level1"
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="state"
+              name="state"
+              label="State/Province/Region"
+              fullWidth
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              id="zip"
+              name="zip"
+              label="Zip / Postal code"
+              fullWidth
+              autoComplete="billing postal-code"
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              id="country"
+              name="country"
+              label="Country"
+              fullWidth
+              autoComplete="billing country"
+            />
+          </Grid>
+
+          <Grid item xs={1}>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              onClick={this.addClinic}
+            >
+              Create
+            </Button>
+          </Grid>
         </Grid>
       </form>
     );
