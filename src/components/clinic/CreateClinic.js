@@ -47,9 +47,9 @@ class CreateClinic extends Component {
   // render dom elements
   render() {
     return (
-      <form  novalidation>
+      <form >
         <Grid>
-          <Typography variant="title" margin={2} component="h3">
+          <Typography variant="caption" margin={2} component="h3">
             Create a clinic
           </Typography>
         </Grid>
@@ -61,7 +61,7 @@ class CreateClinic extends Component {
           justify="center"
           alignItems="center"
         >
-          <Grid Item xs={12} sm={6}>
+          <Grid item={true} xs={12} sm={6}>
             <TextField
               required
               id="displayName"
