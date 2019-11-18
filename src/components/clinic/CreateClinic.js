@@ -48,7 +48,7 @@ class CreateClinic extends Component {
     return (
       <form>
         <Grid>
-          <Typography variant="caption" margin={2} component="h3">
+          <Typography variant="h6" margin={2} component="h3">
             Create a clinic
           </Typography>
         </Grid>
