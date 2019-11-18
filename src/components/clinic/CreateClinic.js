@@ -47,7 +47,7 @@ class CreateClinic extends Component {
   // render dom elements
   render() {
     return (
-      <form container novalidation>
+      <form  novalidation>
         <Grid>
           <Typography variant="title" margin={2} component="h3">
             Create a clinic
@@ -72,77 +72,7 @@ class CreateClinic extends Component {
               value={this.state.displayName}
             />
           </Grid>
-          <Grid Item xs={12} sm={6}>
-            <TextField
-              required
-              id="registrationNumber"
-              name="registrationNumber"
-              label="Registration Number"
-              fullWidth
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              id="address1"
-              name="address1"
-              label="Address line 1"
-              fullWidth
-              autoComplete="billing address-line1"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              id="landmark"
-              name="landmark"
-              label="landmark"
-              fullWidth
-              autoComplete="billing address-line1"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="city"
-              name="city"
-              label="City"
-              fullWidth
-              autoComplete="billing address-level1"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              id="state"
-              name="state"
-              label="State/Province/Region"
-              fullWidth
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="zip"
-              name="zip"
-              label="Zip / Postal code"
-              fullWidth
-              autoComplete="billing postal-code"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="country"
-              name="country"
-              label="Country"
-              fullWidth
-              autoComplete="billing country"
-            />
-          </Grid>
-          <Grid item xs={1}>
-            <Button type="submit" variant="contained" color="primary" onClick={this.addClinic} >
-              Create
-            </Button>
-          </Grid>
+         
         </Grid>
       </form>
     );
